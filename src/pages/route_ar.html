@@ -1,4 +1,7 @@
 <section id="routearsection">
     <a onclick="goBack();"><div class="exit_button"><i class="icon ion-close-round"></i></div></a>
-    <img id="route" src='image/image.svg' />
+    <div id="arroute_range">
+		<input id="route_range_ar" type="range" oninput="document.querySelector('#route_range_ar_label2').innerHTML = document.querySelector('#route_range_ar').value + 'km';"/>
+		<div id="route_range_ar_label2">20km</div>
+    </div>
 </section>

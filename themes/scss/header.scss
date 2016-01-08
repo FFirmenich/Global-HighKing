@@ -151,19 +151,3 @@ html > body > header > #navmenu {
     background-color: #333;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-
-/* PAGE ROUTE - STANDARD */
-#routesection > #route {
-    width: 100%;
-    height: calc(100vh - 50px);
-}
-#routesection > a > #ar {
-    position: fixed;
-    left: 10px;
-    bottom: 10px;
-}
-/* PAGE ROUTE - AR */
-#routearsection > #route {
-    width: 100%;
-    height: calc(100vh - 50px);
-}

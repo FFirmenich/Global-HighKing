@@ -273,21 +273,6 @@ html > body > header > #navmenu {
   background-color: #333;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
-/* PAGE ROUTE - STANDARD */
-#routesection > #route {
-  width: 100%;
-  height: calc(100vh - 50px); }
-
-#routesection > a > #ar {
-  position: fixed;
-  left: 10px;
-  bottom: 10px; }
-
-/* PAGE ROUTE - AR */
-#routearsection > #route {
-  width: 100%;
-  height: calc(100vh - 50px); }
-
 /* PAGES */
 #detailsection {
   width: 100%;
@@ -1002,8 +987,6 @@ html > body > header > #navmenu {
             min-width: 50px; }
           #searchsection > #searchbody > .searchresult > .main > .attributes > .difficulty {
             min-width: 150px; }
-            #searchsection > #searchbody > .searchresult > .main > .attributes > .difficulty > span > .icon_schwierigkeitsgrad {
-              height: 10px; }
           #searchsection > #searchbody > .searchresult > .main > .attributes > .time {
             min-width: 50px; }
 
@@ -1064,6 +1047,9 @@ html > body > header > #navmenu {
 
 /* colors */
 /* define important color variables */
+.icon_difficulty {
+  width: 30px; }
+
 /* CHECKBOX */
 input[type="checkbox"] + label .check {
   background-color: #8bc34a;
@@ -1084,7 +1070,7 @@ input[type="text"], input[type="password"] {
 
 /*RANGE*/
 input[type="range"] {
-  background-color: #ffffff;
+  background-color: white;
   height: 5px;
   border-radius: 5px; }
   input[type="range"]::-webkit-slider-thumb {
@@ -1100,10 +1086,51 @@ header {
   header > #title {
     color: #dcedc8; }
 
+/* INFO - WINDOW*/
+.info_window {
+  position: absolute;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .info_window > p > span#title {
+    font-weight: bold; }
+  .info_window > div {
+    display: flex-block; }
+
+/* PAGE ROUTE - AR */
+#routearsection {
+  background: url("../image/demo/karte_ar.jpg");
+  height: calc(100vh - 50px);
+  width: 100%; }
+  #routearsection > #arroute_range {
+    text-align: center;
+    width: 60%; }
+    #routearsection > #arroute_range > #route_range_ar {
+      width: 100%; }
+      #routearsection > #arroute_range > #route_range_ar::-webkit-slider-thumb {
+        background-color: #8bc34a; }
+    #routearsection > #arroute_range > #route_range_ar_label1, #routearsection > #arroute_range #route_range_ar_label2 {
+      color: white;
+      text-align: left; }
+
+/* PAGE RADAR - AR*/
+#radarsection_ar {
+  background: url("../image/demo/furtwangen.jpg") no-repeat;
+  height: calc(100vh - 50px); }
+  #radarsection_ar > .walk_button {
+    position: relative;
+    background-color: #1a237e;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px; }
+
 #detailsection > #detailhead {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   #detailsection > #detailhead > #detailmenu > .element {
-    background: #ffffff;
+    background: white;
     border-right: 1px solid #8bc34a; }
     #detailsection > #detailhead > #detailmenu > .element > a {
       color: #8bc34a; }
@@ -1112,7 +1139,7 @@ header {
   #detailsection > #detailhead > #detailmenu > .selected {
     background: #8bc34a !important; }
     #detailsection > #detailhead > #detailmenu > .selected > a {
-      color: #ffffff !important; }
+      color: white !important; }
 
 #detailsection > #detailbody > #detailbodyinfo {
   padding-top: 20px;
@@ -1121,7 +1148,7 @@ header {
     margin-top: 0; }
   #detailsection > #detailbody > #detailbodyinfo > #detailimage:before, #detailsection > #detailbody > #detailbodyinfo > #detailimage:after {
     background-color: rgba(0, 0, 0, 0.3);
-    color: #ffffff; }
+    color: white; }
   #detailsection > #detailbody > #detailbodyinfo > #detailimage > .hikeimage > .img {
     background: url("../image/demo/route1_1.jpg");
     background-size: cover;
@@ -1133,27 +1160,27 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 10% 50%;
-  color: #ffffff; }
+  color: white; }
   #highscoresection > #world > .row, #highscoresection #facebook > .row {
-    border-top: 1px solid #ffffff; }
+    border-top: 1px solid white; }
     #highscoresection > #world > .row:first-child, #highscoresection #facebook > .row:first-child {
       border: none; }
     #highscoresection > #world > .row > .position > .inner, #highscoresection #facebook > .row > .position > .inner {
       background-color: #8bc34a; }
     #highscoresection > #world > .row > .name > a, #highscoresection #facebook > .row > .name > a {
-      color: #ffffff; }
+      color: white; }
   #highscoresection > #world > .headline {
-    color: #ffffff; }
+    color: white; }
   #highscoresection > #facebook > .headline {
-    color: #ffffff; }
+    color: white; }
   #highscoresection > #facebook > .row > .position > .inner {
     background-color: #1a237e; }
   @media screen and (min-width: 650px) {
     #highscoresection > a > #world_button {
-      color: #ffffff; } }
+      color: white; } }
   @media screen and (min-width: 650px) {
     #highscoresection > a > #facebook_button {
-      color: #ffffff; } }
+      color: white; } }
 
 #loginsection {
   background: url("../image/demo/background.jpg");
@@ -1163,13 +1190,13 @@ header {
   #loginsection > #area_benutzername > label, #loginsection #area_password > label {
     background-color: #8bc34a; }
   #loginsection > #area_remember > label > .text {
-    color: #ffffff; }
+    color: white; }
   #loginsection > #area_password > #passwort_vergessen {
-    color: #ffffff; }
+    color: white; }
   #loginsection > #area_login > #login {
     background-color: #8bc34a;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    color: #ffffff; }
+    color: white; }
 
 #profilesection {
   background: url("../image/demo/background.jpg");
@@ -1188,7 +1215,7 @@ header {
       width: 100%;
       height: 100%; }
   #profilesection > #profilehead > #profiledetails {
-    color: #ffffff; }
+    color: white; }
     #profilesection > #profilehead > #profiledetails > #profileepbar {
       width: 100%;
       height: 20px;
@@ -1199,8 +1226,8 @@ header {
         width: 70%;
         background-color: #8bc34a; }
   #profilesection > #profilebody > #achievements {
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff; }
+    border-top: 1px solid white;
+    border-bottom: 1px solid white; }
     #profilesection > #profilebody > #achievements > .achievement > #ach_1 {
       background: url("../image/demo/achievements/ach_1.png");
       background-size: 100% 100%; }
@@ -1237,11 +1264,11 @@ header {
       #profilesection > #profilebody > #achievements > .achievement > #ach_5 > .value {
         display: none; }
     #profilesection > #profilebody > #achievements > .achievement > .text {
-      color: #ffffff; }
+      color: white; }
     #profilesection > #profilebody > #achievements > .progress > label {
-      color: #ffffff; }
+      color: white; }
     #profilesection > #profilebody > #achievements > .progress > #progressbar {
-      background-color: #ffffff; }
+      background-color: white; }
       #profilesection > #profilebody > #achievements > .progress > #progressbar > div {
         background-color: #8bc34a; }
 
@@ -1255,13 +1282,21 @@ header {
     background-color: #8bc34a; }
   #radarsection > .hike_circle {
     background-color: #1a237e;
-    color: #ffffff; }
+    color: white; }
   #radarsection > #radar_range::-webkit-slider-thumb {
     background-color: #8bc34a; }
   #radarsection > #radar_range_label1, #radarsection #radar_range_label2 {
-    color: #ffffff; }
+    color: white; }
 
-/* PAGE RADAR - AR */
+/* PAGE ROUTE - STANDARD */
+#routesection > #route {
+  width: 100%; }
+
+#routesection > a > #ar {
+  position: fixed;
+  left: 10px;
+  bottom: 10px; }
+
 #searchhead {
   background-color: #8bc34a; }
 
@@ -1271,7 +1306,7 @@ header {
   background-repeat: no-repeat;
   background-position: 10% 50%; }
   #searchsection > #filter_window {
-    color: #ffffff;
+    color: white;
     background-color: #8bc34a; }
   #searchsection > #searchbody > .searchresult > .main {
     background-color: rgba(255, 255, 255, 0.9);

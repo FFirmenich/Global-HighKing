@@ -1,16 +1,17 @@
 @charset "utf-8";
 
 /* colors */
-$green: #8bc34a;
-$green2: #dcedc8;
+$green: rgb(139,195,74);
+$green2: rgb(220,237,200);
 
-$white: #ffffff;
+$white: rgb(255,255,255);
 
 $blue: rgb(26,35,126);
 
 
 /* define important color variables */
 $primary-color: $green;
+$secondary-color: $blue;
 $headline-color: $green2;
 
 $font-primary-color: $white;

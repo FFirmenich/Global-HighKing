@@ -8,14 +8,21 @@
 
 @import 'demo/colors';
 
+@import 'demo/difficulty';
+
 @import 'demo/inputs';
 
 @import 'demo/header';
 
+@import 'demo/info_window';
+
+
+@import 'demo/pages/ar';
 @import 'demo/pages/detail';
 @import 'demo/pages/highscore';
 @import 'demo/pages/login';
 @import 'demo/pages/profile';
 @import 'demo/pages/radar';
+@import 'demo/pages/route';
 @import 'demo/pages/search';
 @import 'demo/pages/start';

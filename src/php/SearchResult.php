@@ -34,7 +34,7 @@ class SearchResult {
         echo '                <span class="text">'.$this->height.'</span>';
         echo '            </div>';
         echo '            <div class="difficulty">';
-        echo '                <span><img src="'.$this->getLevelIcon().'" class="icon_schwierigkeitsgrad" /></span>';
+        echo '                <span><img src="'.$this->getLevelIcon().'" class="icon_difficulty" /></span>';
         echo '                <span class="text">'.$this->level.'</span>';
         echo '            </div>';
         echo '            <div class="time">';
