@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+#loginsection {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    background: #fff url("../image/image.svg");
+    background-size: 100% 100%;
+    
+    > #area_benutzername, #area_password {
+        > label {
+            position: absolute;
+            left: 4%;
+            top: 0;
+            background-color: #555;
+            border-radius: 50%;
+            font-size: 25px;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 40px;
+            height: 40px;
+            width: 40px;
+            color: $white;
+            
+            @media screen and (min-width: $max-smartphone) {
+                left: 5%;
+                top: -10px;
+                font-size: 35px;
+                line-height: 60px;
+                height: 60px;
+                width: 60px;
+            }
+            
+            @media screen and (min-width: 620px) {
+                left: calc(50% - 280px);
+            }
+        }
+    }
+    
+    > #area_benutzername {
+        margin: 100px 0 60px 0;
+        color: #000 !important;
+        width: 100%;
+        position: relative;
+        
+        > input {
+            width: 60%;
+        }
+    }
+    
+    > #area_password {
+        color: #000 !important;
+        margin-bottom: 30px;
+        position: relative;
+        
+        > input {
+            width: 60%;
+        }
+        
+        > #passwort_vergessen {
+            position: absolute;
+            top: 0;
+            left: calc(80% - 20px);
+            font-weight: 500;
+            font-size: 25px;
+            cursor: pointer;
+            
+            @media screen and (min-width: 665px) {
+                left: calc(50% + 180px);
+            }
+        }
+    }
+    
+    > #area_remember {
+        margin-bottom: 70px;
+        
+        > label {
+            > .check {
+                margin: 20px 15px 0 -15px;
+                vertical-align: top;
+            }
+            > .text {
+                display: inline-block;
+                vertical-align: top;
+                padding: 23px 0 0 0;
+            }
+        }
+    }
+    
+    > #area_login {
+        > #login {
+            font-size: 25px;
+            font-family: "Rockwell",serif;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #555;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}

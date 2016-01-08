@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+#searchhead {
+    background-color: $green;
+}
+
+#searchsection {
+    @include background();
+    
+    > #filter_window {
+        color: $white;
+        background-color: $green;
+    }
+    
+    > #searchbody {
+        > .searchresult {            
+            > .main {
+                
+                background-color: rgba(255,255,255,0.9);
+                border: none;
+                
+                &:before {
+                    right: -52px;
+                    border-top: 51px solid transparent;
+                    border-bottom: 51px solid transparent;
+                    border-left: 51px solid transparent;
+                }
+                
+                &:after {
+                    right: -50px;
+                    border-top: 50px solid transparent;
+                    border-bottom: 50px solid transparent;
+                    
+                    border-left: 50px solid rgba(255,255,255,0.9);
+                }       
+            }
+        }
+    }
+}

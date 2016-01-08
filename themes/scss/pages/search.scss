@@ -1,0 +1,270 @@
+@charset "utf-8";
+#searchhead {
+    position: absolute;
+    top: 10px;
+    left: calc(4% + 50px);
+    width: calc(92% - 100px);
+    height: calc(100% - 10px);
+    background: $primary-color;
+    z-index: 3;
+    
+    @media screen and (min-width: $br-max-tablet) {
+        width: calc(75% - 70px);
+    }
+    
+    > form {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        
+        > #searchfield {
+            padding: 1px 0 1px 0;
+            width: 100%;
+            min-width: 160px;
+          
+            > input {
+                margin: 0;
+                width: 100%;
+                max-width: 100%;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid $white;
+                height: 30px;
+                color: $white;
+                font-family: "Rockwell",serif;
+                font-size: 20px;
+                @include placeholder {
+                    color: rgba(255,255,255,0.9);
+                }
+            }
+        }
+        > #searchbutton, #filter {
+            font-size: 30px;
+            line-height: 30px;
+            vertical-align: middle;
+            color: $white;
+            cursor: pointer;
+            text-align: center;
+            width: 50px;
+            height: 30px;
+            z-index: 4;
+        }
+        > #searchbutton {
+            background: transparent;
+            margin-left: -69px;
+            width: 30px;
+            text-align: center;
+            border: 0;
+            display: none;
+            
+            @media screen and (min-width: $br-max-smartphone) {
+                display: block;
+            }
+        }
+        
+        > #filter {
+            @media screen and (max-width: $br-max-smartphone) {
+                margin-left: -39px;
+            }
+        }
+    }
+}
+#searchsection {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: url('../image/image.svg');
+    background-size:100% 100%;
+    
+    > #filter_window {
+        position: fixed;
+        width: 100%;
+        top: -200px;
+        left: 0;
+        height: 250px;
+        background-color: #666;
+        z-index: 5;
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+            
+        @media screen and (min-width: $br-max-smartphone) {
+            top: -50px;
+            height: 100px;
+        }
+            
+        @media screen and (min-width: $br-max-tablet) {
+            top: 0;
+            height: 50px;
+        }
+        
+        > div {
+            position: relative;
+            padding: 15px 0 5px 0;
+            height: 30px;
+            flex-basis: 90%;
+            
+            @media screen and (min-width: $br-max-smartphone) {                                
+                flex-basis: 45%;
+            }
+            
+            @media screen and (min-width: $br-max-tablet) {
+                flex-basis: 20%;
+            }
+            
+            > input[type="range"] {
+                width: 100%;
+            }
+            
+            > .symbol {
+                position: absolute;
+                top: 0;
+                left: 3px;
+                
+                 > .ion-arrow-resize {
+                    display: inline-block;
+                    margin: 2px 0 0 0;
+                    width: 17px;
+                    height: 17px;
+                    transform: rotate(45deg) !important;
+                }
+                
+                > span {
+                    margin: 4px 0 0 5px;
+                    display: inline-block;
+                    font-size: 12px;
+                    line-height: 15px;
+                    vertical-align: top;
+                }
+            }
+            
+            > .text {
+                margin: 4px 0 0 0;
+                position: absolute;
+                left: auto;
+                right: 0;
+                top: 0;
+                font-size: 12px;
+            }
+        }
+    }
+    
+    
+    > #searchbody {
+        width: 100%;
+        height: 100%;
+        > .searchresult {
+            margin-top: 5px;
+            height: 100px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            
+            @media screen and (min-width: $br-max-smartphone) {
+                margin-left: calc(4% + 50px);
+                width: calc(75% - 28px);
+            }
+            
+            > .main {
+                background-color: #ddd;
+                width: calc(100% - 72px);
+                min-width: 300px;
+                height: calc(100% - 20px);
+                padding: 10px 0 10px 20px;
+                border: 1px solid #000;
+                border-right: none;
+                position: relative;
+                
+                &:before {
+                    content:"";
+                    width:0;
+                    height:0;
+                    position:absolute;
+                    right:-51px;
+                    top: -1px;
+                    
+                    border-top: 51px solid transparent;
+                    border-bottom: 51px solid transparent;
+                    
+                    border-left: 51px solid #000;
+                }
+                
+                &:after {
+                    content:"";
+                    position:absolute;
+                    right: -49px;
+                    top: 0px;
+                    
+                    border-top: 50px solid transparent;
+                    border-bottom: 50px solid transparent;
+                    
+                    border-left: 50px solid #ddd;
+                }
+                
+                > .name > a {
+                    font-family: 'Rockwell', serif;
+                    font-size: 17px;
+                    text-decoration: none;
+                    color: #000;
+                }
+                
+                > .attributes {
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-content: space-around;
+                    align-items: flex-start;
+                
+                    > div {
+                        overflow: hidden;
+                        flex-basis: 25%;
+                        @media screen and (max-width: $br-max-smartphone) {
+                            flex-basis: 50%;
+                        }
+                    }
+                    
+                    > .length {
+                        min-width: 150px;
+                        
+                        display: flex;
+                        
+                        > .distance_arrows {
+                            display: block;
+                            margin: 3px 0 0 3px;
+                            width: 17px;
+                            height: 17px;
+                            transform: rotate(45deg);
+                        }
+                        > .text {
+                            margin-left: 14px;
+                        }
+                    }
+                    
+                    > .height {
+                        min-width: 50px;
+                    }
+                    
+                    > .difficulty {
+                        min-width: 150px;
+                        > span > .icon_schwierigkeitsgrad {
+                            height: 10px;
+                        }
+                    }
+                    
+                    > .time {
+                        min-width: 50px;
+                    }
+                }             
+            }
+        }
+    }
+}

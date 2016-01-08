@@ -1,0 +1,1 @@
+sass --watch scss/demo.scss:../css/demo.css

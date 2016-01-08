@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+#startsection {
+    @include background();
+    
+    > #startbody {
+        > .row {
+            > .item {
+                > a {
+                    > div {
+                        background-color: $primary-color;
+                        @include elevation(2);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+.buttonarea {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: -150px;
+    height: 180px;
+    width: 220px;
+    transition: left 1s;
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    
+    &:active {
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
+    }
+    
+    > .layer {          
+        position: absolute;
+        left:0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+    
+    > a {
+        > #highscore {
+            position: absolute;
+            left: 10px;
+            bottom: 90px;
+        }
+        
+        > #liked {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+        
+        > #locked {
+            position: absolute;
+            left: 90px;
+            bottom: 10px;
+        }
+    }
+}
+/* ROUND BUTTON */
+.round_button {
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    color: $white;
+    font-size: 35px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    z-index: 5;
+}
+/* EXIT BUTTON */
+.exit_button {
+    position: fixed;
+    right: 10px;
+    top: 60px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    color: $white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    z-index: 5;
+    
+    > .icon {
+        display: block;
+        padding: 1px 0 0 0;
+    }
+}

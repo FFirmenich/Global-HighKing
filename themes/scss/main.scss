@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@import 'fonts';
+
+@import 'vars';
+
+@import 'colors';
+
+@import 'mixins';
+
+@import 'inputs';
+@import 'buttons';
+
+@import 'header';
+
+/* PAGES */
+@import 'pages/detail';
+@import 'pages/highscore';
+@import 'pages/login';
+@import 'pages/profile';
+@import 'pages/radar';
+@import 'pages/search';
+@import 'pages/start';
+
+/* SCROLLBAR HIDE */
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* BOLD ROBOTO */
+.b_roboto {
+    font-weight: 400;
+}

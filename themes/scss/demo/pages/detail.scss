@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+#detailsection {
+    > #detailhead {
+        @include elevation(1);
+        
+        > #detailmenu {
+            > .element {
+                background: $font-primary-color;
+                border-right: 1px solid $primary-color;
+                > a {
+                    color: $primary-color;
+                }
+            }
+                
+            & :last-child {
+                border: none;
+            }
+                    
+            > .selected {
+                background: $primary-color !important;
+                > a {
+                    color: $font-primary-color !important;
+                }
+            }
+        }
+    }
+}
+@import 'detail/info';
+@import 'detail/map';
+@import 'detail/height';

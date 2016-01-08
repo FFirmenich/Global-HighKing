@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@import 'main';
+
+@import 'demo/buttons';
+
+@import 'demo/vars';
+
+@import 'demo/colors';
+
+@import 'demo/inputs';
+
+@import 'demo/header';
+
+@import 'demo/pages/detail';
+@import 'demo/pages/highscore';
+@import 'demo/pages/login';
+@import 'demo/pages/profile';
+@import 'demo/pages/radar';
+@import 'demo/pages/search';
+@import 'demo/pages/start';

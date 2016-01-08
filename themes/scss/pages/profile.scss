@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+#profilesection {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: url('../image/image.svg');
+    background-size:100% 100%;
+    
+    > #profilehead {
+        height: 180px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        font-family: 'Rockwell', serif;
+        
+        > #profileimage {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            text-align: center;
+            
+            > .img {
+                width: 100%;
+                height: 100%;
+                
+                > img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        
+        > #profiledetails {
+            height: 100%;
+            width: calc(100% - 200px);
+            padding: 0 0 0 40px;
+            
+            @media screen and (max-width: $max-smartphone) {
+                width: calc(100% - 170px);
+                padding: 0 0 0 20px;
+            }
+            
+            > #profilename {
+                font-size: 30px;
+            }
+            
+            > #profilelevel {
+                font-size: 20px;
+            }
+            
+            > #profileepbar {
+                margin: 10px 0 10px 0;
+                width: 100%;
+                height: 18px;
+                padding: 1px;
+                background-color: #aaa;
+                max-width: 200px;
+                
+                > .inner {
+                    width: calc(70% - 2px);
+                    height: calc(100%);
+                    background-color: #ddd;
+                }
+            }
+            
+            > #profileeptext {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    > #profilebody {
+        > #achievements {
+            position: relative;
+            padding: 0 20px 80px 20px;
+            cursor: pointer;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: space-around;
+            align-items: flex-start;
+            
+            > .achievement {
+                position: relative;
+                
+                > .text {
+                    > .b {
+                        font-weight: bold;
+                    }
+                    display: none;
+                    position: absolute;
+                    left: 100px;
+                    top: 10px;
+                    width: 60%;
+                    height: 50px;
+                    vertical-align: middle;
+                }
+                > .inner {
+                    background-color: #cec3bf;
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+                    vertical-align: middle;
+                    color: #fff;
+                    margin: 5px;
+                    position: relative;
+                    font-size: 25px;
+                    
+                    > .type {
+                        position: absolute;
+                        top: -4px;
+                        text-align: center;
+                        width: 100%;
+                    }
+                    
+                    > .value {
+                        position: absolute;
+                        top: 17px;
+                        text-align: center;
+                        width: 100%;
+                        font-size: 15px;
+                    }
+                }
+            }
+                
+            > .progress {
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                left: 10%;
+                width: 80%;
+                height: 40px;
+                
+                @media screen and (min-width: $br-max-tablet) {
+                    width: 800px;
+                    left: calc(50% - 400px);
+                }
+                
+                > label {
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 80%;
+                    width: 20%;
+                    font-size: 12px;
+                }
+                
+                > #progressbar {
+                    position: absolute;
+                    top: 1px;
+                    left: 0;
+                    width: 70%;
+                    height: 10px;
+                    background-color: #ddd;
+                    border-radius: 10px;
+                    
+                    > div {
+                        background-color: $primary-color;
+                        height: 10px;
+                        width: 6%;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

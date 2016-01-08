@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* CHECKBOX */
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    display: inline-block;
+    position: relative;
+    cursor:pointer;
+}
+input[type="checkbox"] + label .check {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #555;
+    cursor:pointer;
+    color: #fff;
+}
+input[type="checkbox"]:checked + label .check {
+    &:after {
+        display: inline-block;
+        font-family: "Ionicons";
+        position: absolute;
+        content : '';
+        top: 15px;
+        margin: 0 0 0 -8px;
+        font-size: 32px;
+    }
+}
+/* TEXT AND PASSWORD */
+input[type="text"], input[type="password"] {
+    max-width: 400px;
+    background-color: transparent;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    color: #000;
+    font-family: "Rockwell",serif;
+    font-size: 20px;
+    
+    &:focus {
+        outline:0;
+    }
+    
+    @include placeholder {
+        color: rgba(0,0,0,0.7);
+    }
+}
+
+/*RANGE*/
+input[type="range"] {
+    -webkit-appearance: none;
+    background-color: #000;
+    height: 1px;
+    z-index: 6;
+    
+    &:focus {
+        outline:0;
+    }
+    
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background-color: #aaa;
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 6;
+    }
+}

@@ -1,0 +1,18 @@
+<section id="loginsection">
+    <div id="area_benutzername">
+        <label for="benutzername"><i class="icon ion-android-person"></i></label>
+        <input type="text" id="benutzername" placeholder="Benutzername" />
+    </div>
+    <div id="area_password">
+        <label for="password"><i class="icon ion-ios-locked"></i></label>
+        <input type="password" id="password" placeholder="Passwort" />
+        <div id="passwort_vergessen" title="Paswort vergessen?">?</div>
+    </div>
+    <div id="area_remember">
+        <input type="checkbox" id="remember" name="remember" />
+        <label for="remember"><span class="check"></span><span class="text">Angemeldet bleiben</span></label>
+    </div>
+    <div id="area_login">
+        <button type="button" id="login" onclick="login(document.getElementById('benutzername').value);">Login</button>
+    </div>
+</section>

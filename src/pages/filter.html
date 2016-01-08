@@ -1,0 +1,22 @@
+<div id="filter_window">
+    <div>
+        <div class="symbol"><i class="icon ion-arrow-resize"></i><span>Strecke</span></div>
+        <div id="length_text" class="text">20km</div>
+        <input id="filter_length" class="range" type="range"  value="20" min="1" max="50" oninput="updateLength();" />
+    </div>
+    <div>
+        <div class="symbol"><i class="icon ion-arrow-graph-up-right"></i><span>Höhenmeter</span></div>
+        <div id="height_text" class="text">200hm</div>
+        <input id="filter_height" class="range" type="range" min="100" max="3000" value="300" oninput="updateHeight();" />
+    </div>
+    <div>
+        <div class="symbol"><i class="icon ion-android-image"></i><span>Schwierigkeit</span></div>
+        <div id="level_text" class="text">2</div>
+        <input id="filter_level" class="range" type="range" min="1" max="3" oninput="updateLevel();" />
+    </div>
+    <div>
+        <div class="symbol"><i class="icon ion-ios-stopwatch-outline"></i><span>Zeit</span></div>
+        <div id="time_text" class="text">max. 4h</div>
+        <input id="filter_time" class="range" type="range" min="1" max="15" value="4" oninput="updateTime();" />
+    </div>
+</div>

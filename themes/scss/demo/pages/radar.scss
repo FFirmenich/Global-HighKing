@@ -1,0 +1,39 @@
+/* PAGE RADAR - STANDARD */
+#radarsection {
+    background: $radar-background;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    
+    > #radar {
+    }
+    
+    > #radar_circle {
+    }
+    
+    > #radar_position {
+        background-color: $green;
+    }
+    
+    > .hike_circle {
+        background-color: $blue;
+        color: $white;
+    }
+    
+    > #radar_range {
+        &::-webkit-slider-thumb {
+            background-color: $green;
+        }
+    }
+    
+    > #radar_range_label1, #radar_range_label2 {
+        color: $white;
+    }
+    
+    > a > #ar {
+    }
+}
+
+/* PAGE RADAR - AR */
+#radarsection_ar > #radar_ar {
+}

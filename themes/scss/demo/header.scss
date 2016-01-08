@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+header {
+    background-color: $primary-color;
+    @include elevation(1);
+    
+    > #user_box > a > #user_photo {
+    }
+    
+    > #a_logo > #logo {
+        background: transparent url("../image/demo/logo.svg");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+    }
+
+    > #title {
+    	color: $headline-color;
+    }
+}

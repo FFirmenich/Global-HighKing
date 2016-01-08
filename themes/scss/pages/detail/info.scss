@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+#detailsection > #detailbody > #detailbodyinfo {
+	text-align: center;
+    
+    > p {
+        margin-top: 0;
+    }
+
+    > #detailimage {
+        width: 100%;
+        position: relative;
+        height: 200px;
+        
+        &:before, &:after {
+            font-family: Ionicons;
+            position: absolute;
+            background-color: rgba(0,0,0,0.1);
+            display: inline-block;
+            z-index: 3;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 30px;
+            cursor: pointer;
+            top: 82px;
+            width: 35px;
+            height: 38px;
+            line-height: 35px;
+            border-radius: 50%;
+            padding-top: 2px;
+            
+            @media screen and (min-width: $br-max-smartphone) {
+                font-size: 35px;
+                padding: 0 !important;
+                top: 0px;
+                width: 7%;
+                min-width: 40px;
+                max-width: 80px;
+                height: 200px;
+                line-height: 200px;
+                border-radius: 0;
+            }
+        }
+        
+        &:before {
+            padding-right: 5px;
+            content: '';
+            left: 5px;
+            
+            @media screen and (min-width: $br-max-smartphone) {
+                left: 0;
+            }
+        }
+        &:after {
+            padding-left: 5px;
+            content: '';
+            right: 5px;
+            
+            @media screen and (min-width: $br-max-smartphone) {
+                right: 0;
+            }
+        }
+        > .hikeimage {
+            width: 100%;
+            overflow: hidden;
+            
+            > .img {
+                background: $white url('../image/image.svg');
+                background-size: 100% 100%;
+                width: 100%;
+                height: 200px;
+            }
+        }
+    }
+
+    > .content {
+        padding: 20px;
+    	display: inline-block;
+    	text-align: left;
+        width: calc(100% - 40px);
+            
+        @media screen and (min-width: $br-max-smartphone) {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+
+            -webkit-column-gap: 20px;
+            -moz-column-gap: 20px;
+            column-gap: 20px;
+        }
+            
+        @media screen and (min-width: $br-max-tablet) {
+            padding: 100px;
+            width: calc(100% - 200px);
+
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+
+            -webkit-column-gap: 20px;
+            -moz-column-gap: 20px;
+            column-gap: 20px;
+        }
+
+    }
+}

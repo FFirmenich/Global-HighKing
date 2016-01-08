@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+/* MAIN */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    positon: relative;
+}
+header {
+    width: 100%;
+    background-color: #333;
+    height: $header-height;
+    font-family: 'Rockwell', serif;
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    > #a_home {
+        position: absolute;
+        display: block;
+        left: 2%;
+        top: 0;
+        background-image: url('../image/menu_symbol_weiss.svg');
+        background-size: 100% 100%;
+        margin: 10px;
+        height: 30px;
+        width: 30px;
+        color: $white;
+    }
+    > #a_logo {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+        > #logo {
+            position: absolute;
+            top: 5px;
+            left: calc(50% - 60px);
+            display: block;
+            width: 120px;
+            height: 40px;
+            background: $white url("../image/image.svg");
+            background-size: 100% 100%;
+            background-position: 50% 50%;
+        }
+    }
+    > #title, #user_box {
+        position: absolute;
+        height: $header-inner-height;
+        line-height: $header-inner-height;
+        vertical-align: middle;
+        color: $white;
+        font-size: calc(#{$header-inner-height} - 10px);
+        top: $header-inner-top;
+    }
+    
+    > #title {
+        left: calc(4% + 50px);
+        width: 200px;
+        text-align: left;
+        padding: 2px 0 0 0;
+        
+        @media screen and (min-width: $br-max-smartphone) {
+            text-align: center;
+            left: calc(50% - 100px);
+        }
+    }
+    
+    > #user_box {
+        right: 2%;
+        left: auto;
+        text-align: right;
+        padding: 0 10px 0 10px;
+        display: inline-block;
+        width: 30px;
+        
+         > a {
+            color: $white;
+            text-decoration: none;
+            display: inline-block;
+            height: $header-inner-height;
+            top: 0;
+            
+             > #user_photo {
+                position: absolute;
+                top: 0;
+                right: 10px;
+                vertical-align: top;
+                width: 30px;
+                border-radius: 50%;
+                overflow: hidden;
+                height: 30px;
+                
+                > img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            > #user_name {
+                position: absolute;
+                top: 2px;
+                right: 50px;
+                height: $header-inner-height;
+                vertical-align: top;
+                display: inline-block;
+                overflow: hidden;
+                @media screen and (max-width: $br-max-tablet) {
+                    display: none;
+                }
+            }
+            
+            > #login {
+                position: absolute;
+                top: 2px;
+                right: 10px;
+                height: $header-inner-height;
+                vertical-align: top;
+                display: inline-block;
+                overflow: hidden;
+            }
+        }
+    }
+}
+main {
+    height: calc(100% - #{$header-height});
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: $header-height;
+}
+
+/* NAV MENU */
+html > body > header > #navmenu {
+    display: none;
+    cursor: default;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    height: calc(100% - 50px);
+    width: 30vw;
+    min-width: 300px;
+    background-color: #333;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* PAGE ROUTE - STANDARD */
+#routesection > #route {
+    width: 100%;
+    height: calc(100vh - 50px);
+}
+#routesection > a > #ar {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+}
+/* PAGE ROUTE - AR */
+#routearsection > #route {
+    width: 100%;
+    height: calc(100vh - 50px);
+}

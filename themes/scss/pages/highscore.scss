@@ -1,0 +1,131 @@
+#highscoresection {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-size:100% 100%;    
+    
+    font-family: Rockwell, serif;
+    
+    > #world, #facebook {
+        position: absolute;
+        top: 0;
+        
+        width: 100%;
+        
+        @media screen and (min-width: $break-width-highscore) {
+            width: 40%;
+        }
+        
+        > .headline {
+            height: 25px;
+            margin: 20px 0 20px 0;
+            text-align: center;
+            font-size: 20px;
+            color: #000;
+            white-space: no-wrap;
+            overflow: hidden;
+        }
+        
+        > .row {
+            border-top: 1px solid #000;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 70px;
+            line-height: 70px;
+            vertical-align: middle;
+            
+            &:first-child {
+                border: none;
+            }
+            
+            > .position {
+                text-align: center;
+                line-height: 30px;
+                height: calc(100% - 40px);
+                padding: 20px;
+                width: 50px;
+                >.inner {
+                    font-size: 20px;
+                    color: $white;
+                    background-color: #cec3bf;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+            }
+            > .ep {
+                font-size: 20px;
+                text-align: left;
+                width: calc(30% - 20px);
+                padding: 0 10px 0 10px;
+            }
+            > .name {
+                font-size: 17px;
+                padding-right: 10px;
+                text-align: right;
+                width: calc(70% - 110px);
+                > a {
+                    text-decoration: none;
+                    color: #000;    
+                }
+            }
+        }
+    }
+    
+    > #world {
+        left: 0;
+        
+        @media screen and (min-width: $break-width-highscore) {
+            display: block !important;
+            left: 8%;
+        }
+    }
+    
+    > #facebook {        
+        display: none;
+        
+        @media screen and (min-width: $break-width-highscore) {
+            display: block !important;
+            left: auto;
+            right: 8%;
+        }
+    }
+    > a {
+        > #world_button {
+            position: fixed;
+            left: 10px;
+            bottom: 90px;
+            
+            @media screen and (min-width: $break-width-highscore) {
+                top: 50px;
+                bottom: auto;
+                left: 0;
+                background-color: transparent;
+                box-shadow: none;
+                color: rgba(0,0,0,0.7);
+                cursor: default;
+            }
+        }
+        
+        > #facebook_button {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            
+            @media screen and (min-width: $break-width-highscore) {
+                top: 50px;
+                bottom: auto;
+                left: auto;
+                right: 0;
+                background-color: transparent;
+                box-shadow: none;
+                color: rgba(0,0,0,0.7);
+                cursor: default;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/* ROUND BUTTON */
+.round_button {
+    background-color: rgba($blue,0.9);
+    
+    &.inactive {
+        background-color: $white;
+        color: $blue;
+    }
+}
+/* EXIT BUTTON */
+.exit_button {
+    background-color: rgba($blue,0.9);
+}

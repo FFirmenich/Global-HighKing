@@ -1,0 +1,67 @@
+#highscoresection {
+    @include background();
+    
+    color: $white;
+    
+    > #world, #facebook {
+        @media screen and (min-width: $break-width-highscore) {
+            
+        }
+        
+         > .row {
+            border-top: 1px solid $white;
+            
+            &:first-child {
+                border: none;
+            }
+            
+            > .position {
+                >.inner {
+                    background-color: $green;
+                }
+            }
+            > .name {
+                > a {
+                    color: $white;    
+                }
+            }
+            > .ep {
+            }
+        }
+    }
+    
+    > #world {
+        @media screen and (min-width: $break-width-highscore) {
+            
+        }
+        > .headline {
+            color: $white;
+        }
+    }
+    
+    > #facebook {
+        @media screen and (min-width: $break-width-highscore) {
+            
+        }
+        
+        > .headline {
+            color: $white;
+        }
+        > .row > .position > .inner {
+            background-color: $blue;
+        }
+    }
+    > a {
+        > #world_button {            
+            @media screen and (min-width: $break-width-highscore) {
+                color: $white;
+            }
+        }
+        
+        > #facebook_button {            
+            @media screen and (min-width: $break-width-highscore) {
+                color: $white;
+            }
+        }
+    }
+}

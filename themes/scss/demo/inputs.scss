@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* CHECKBOX */
+input[type="checkbox"] {
+    
+}
+input[type="checkbox"] + label {
+    
+}
+input[type="checkbox"] + label .check {
+    background-color: $primary-color;
+    color: #fff;
+}
+input[type="checkbox"]:checked + label .check {
+    &:after {
+        
+    }
+}
+
+/* TEXT AND PASSWORD */
+input[type="text"], input[type="password"] {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    
+    @include placeholder {
+        color: rgba(255,255,255,0.9);
+    }
+}
+
+/*RANGE*/
+input[type="range"] {
+    background-color: $white;
+    height: 5px;
+    border-radius: 5px;
+    
+    &::-webkit-slider-thumb {
+        background-color: $blue;
+    }
+}
