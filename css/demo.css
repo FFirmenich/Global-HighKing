@@ -1155,6 +1155,9 @@ header {
     background-repeat: no-repeat;
     background-position: 50% 50%; }
 
+#detailsection > #detailbody > #detailbodyheight > #height {
+  width: 100%; }
+
 #highscoresection {
   background: url("../image/demo/background.jpg");
   background-size: cover;
