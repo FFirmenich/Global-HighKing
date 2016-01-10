@@ -273,6 +273,27 @@ html > body > header > #navmenu {
   background-color: #333;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
+#highscoresection > #tabs {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 25px; }
+  @media screen and (min-width: 760px) {
+    #highscoresection > #tabs {
+      display: none; } }
+  #highscoresection > #tabs > .switch_tab {
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    background-color: #ffffff;
+    width: calc(100% - 1px);
+    border-right: 1px solid #ffffff;
+    text-align: center;
+    color: black;
+    cursor: pointer; }
+  #highscoresection > #tabs > .selected {
+    background: black !important;
+    color: #ffffff; }
+
 /* PAGES */
 #detailsection {
   width: 100%;
@@ -422,9 +443,10 @@ html > body > header > #navmenu {
     position: absolute;
     top: 0;
     width: 100%; }
-    @media screen and (min-width: 650px) {
+    @media screen and (min-width: 760px) {
       #highscoresection > #world, #highscoresection #facebook {
-        width: 40%; } }
+        width: 40%;
+        top: -50px; } }
     #highscoresection > #world > .headline, #highscoresection #facebook > .headline {
       height: 25px;
       margin: 20px 0 20px 0;
@@ -470,45 +492,20 @@ html > body > header > #navmenu {
           text-decoration: none;
           color: #000; }
   #highscoresection > #world {
-    left: 0; }
-    @media screen and (min-width: 650px) {
+    left: 0;
+    margin-top: 50px; }
+    @media screen and (min-width: 760px) {
       #highscoresection > #world {
         display: block !important;
         left: 8%; } }
   #highscoresection > #facebook {
-    display: none; }
-    @media screen and (min-width: 650px) {
+    display: none;
+    margin-top: 50px; }
+    @media screen and (min-width: 760px) {
       #highscoresection > #facebook {
         display: block !important;
         left: auto;
         right: 8%; } }
-  #highscoresection > a > #world_button {
-    position: fixed;
-    left: 10px;
-    bottom: 90px; }
-    @media screen and (min-width: 650px) {
-      #highscoresection > a > #world_button {
-        top: 50px;
-        bottom: auto;
-        left: 0;
-        background-color: transparent;
-        box-shadow: none;
-        color: rgba(0, 0, 0, 0.7);
-        cursor: default; } }
-  #highscoresection > a > #facebook_button {
-    position: fixed;
-    left: 10px;
-    bottom: 10px; }
-    @media screen and (min-width: 650px) {
-      #highscoresection > a > #facebook_button {
-        top: 50px;
-        bottom: auto;
-        left: auto;
-        right: 0;
-        background-color: transparent;
-        box-shadow: none;
-        color: rgba(0, 0, 0, 0.7);
-        cursor: default; } }
 
 #loginsection {
   position: relative;

@@ -1,0 +1,31 @@
+#highscoresection {
+	> #tabs {
+
+		@media screen and (min-width: $br-max-smartphone) {
+            display: none;
+        }
+
+		display: flex;		
+		width: 100%;
+		height: 50px;
+		font-size: 25px;
+
+		> .switch_tab {
+			display: inline-block;
+			padding: 10px 0 10px 0;
+		    background-color: $white;
+		    width: calc(100% - 1px);
+		    border-right: 1px solid #ffffff;
+		    text-align: center;
+		    color: black;
+		    cursor: pointer;
+		}
+
+	    > .selected {
+			background: black !important;
+			color: $white;
+		}
+	}
+}
+
+

@@ -15,8 +15,9 @@
         
         width: 100%;
         
-        @media screen and (min-width: $break-width-highscore) {
+        @media screen and (min-width: $br-max-smartphone) {
             width: 40%;
+            top: -50px;
         }
         
         > .headline {
@@ -78,8 +79,9 @@
     
     > #world {
         left: 0;
+        margin-top: 50px;
         
-        @media screen and (min-width: $break-width-highscore) {
+        @media screen and (min-width: $br-max-smartphone) {
             display: block !important;
             left: 8%;
         }
@@ -87,45 +89,12 @@
     
     > #facebook {        
         display: none;
+        margin-top: 50px;
         
-        @media screen and (min-width: $break-width-highscore) {
+        @media screen and (min-width: $br-max-smartphone) {
             display: block !important;
             left: auto;
             right: 8%;
-        }
-    }
-    > a {
-        > #world_button {
-            position: fixed;
-            left: 10px;
-            bottom: 90px;
-            
-            @media screen and (min-width: $break-width-highscore) {
-                top: 50px;
-                bottom: auto;
-                left: 0;
-                background-color: transparent;
-                box-shadow: none;
-                color: rgba(0,0,0,0.7);
-                cursor: default;
-            }
-        }
-        
-        > #facebook_button {
-            position: fixed;
-            left: 10px;
-            bottom: 10px;
-            
-            @media screen and (min-width: $break-width-highscore) {
-                top: 50px;
-                bottom: auto;
-                left: auto;
-                right: 0;
-                background-color: transparent;
-                box-shadow: none;
-                color: rgba(0,0,0,0.7);
-                cursor: default;
-            }
         }
     }
 }

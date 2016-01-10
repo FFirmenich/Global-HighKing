@@ -52,21 +52,24 @@ function goBack() {
 
 /*HIGHSCORE */
 function showWorld() {
-    if (window.innerWidth >= 650) {
+    if (window.innerWidth >= 760) {
+        console.log('fail');
         return;
     }
-    document.getElementById('world_button').classList.remove('inactive');
-    document.getElementById('facebook_button').classList.add('inactive');
+    console.log('showWorld');
+    document.getElementById('world_button').classList.add('selected');
+    document.getElementById('facebook_button').classList.remove('selected');
     
     document.getElementById('world').style.display = 'block';
     document.getElementById('facebook').style.display = 'none';
 }
 function showFacebook() {
-    if (window.innerWidth >= 650) {
+    if (window.innerWidth >= 760) {
         return;
     }
-    document.getElementById('world_button').classList.add('inactive');
-    document.getElementById('facebook_button').classList.remove('inactive');
+    console.log('showFacebook');
+    document.getElementById('world_button').classList.remove('selected');
+    document.getElementById('facebook_button').classList.add('selected');
     
     document.getElementById('world').style.display = 'none';
     document.getElementById('facebook').style.display = 'block';
