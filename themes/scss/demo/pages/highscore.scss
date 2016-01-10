@@ -4,7 +4,7 @@
     color: $white;
     
     > #world, #facebook {
-        @media screen and (min-width: $break-width-highscore) {
+        @media screen and (min-width: $br-max-smartphone) {
             
         }
         
@@ -31,7 +31,7 @@
     }
     
     > #world {
-        @media screen and (min-width: $break-width-highscore) {
+        @media screen and (min-width: $br-max-smartphone) {
             
         }
         > .headline {
@@ -40,7 +40,7 @@
     }
     
     > #facebook {
-        @media screen and (min-width: $break-width-highscore) {
+        @media screen and (min-width: $br-max-smartphone) {
             
         }
         
@@ -49,19 +49,6 @@
         }
         > .row > .position > .inner {
             background-color: $blue;
-        }
-    }
-    > a {
-        > #world_button {            
-            @media screen and (min-width: $break-width-highscore) {
-                color: $white;
-            }
-        }
-        
-        > #facebook_button {            
-            @media screen and (min-width: $break-width-highscore) {
-                color: $white;
-            }
         }
     }
 }

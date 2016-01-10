@@ -1,0 +1,13 @@
+#highscoresection {
+	> #tabs {
+
+		> .switch_tab {
+		    color: $primary-color;
+		}
+
+	    > .selected {
+			background: $primary-color !important;
+			color: $white;
+		}
+	}
+}
