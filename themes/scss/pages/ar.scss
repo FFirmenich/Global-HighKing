@@ -2,7 +2,7 @@
 
 /* PAGE ROUTE - AR */
 #routearsection {
-    background: url('../image/demo/karte_ar.jpg') no-repeat;
+    background: url('../image/image.svg') no-repeat;
     height: calc(100vh - 50px);
     width: 100%;
 	
@@ -16,7 +16,7 @@
 
 		> #route_range_ar {
 	        &::-webkit-slider-thumb {
-	            background-color: $green;
+	            background-color: black;
 	        }
 	        width: 100%;
 	    } 
@@ -30,35 +30,18 @@
 
 /* PAGE RADAR - AR*/
 #radarsection_ar{
-	background: url("../image/demo/furtwangen.jpg") no-repeat;
-	background-position: 50% 0%;
+	background: url("../image/image.svg") no-repeat;
 	height: calc(100vh - 50px);
-	width: 100%;
 
 	> .walk_button {
-		position: absolute;
-		background-color: $secondary-color;
+		position: relative;
+		background-color: black;
 		color: $white;
 		width: 35px;
 		height: 35px;
 		border-radius: 50%;
 		text-align: center;
 		line-height: 35px;
-	}
-
-	> #walk1 {
-		top: 80%;
-    	left: 20%;
-	}
-
-	> #walk2 {
-	    top: 70%;
-    	left: 85%;
-	}
-
-	> #walk3 {    
-	    top: 85%;
-    	left: 60%;
 	}
 
 	> #arradar_range{	
@@ -71,13 +54,13 @@
 
 		> #radar_ar_range {
 	        &::-webkit-slider-thumb {
-	            background-color: $green;
+	            background-color: black;
 	        }
 	        width: 100%;
 	    } 
 
 	    > #radar_ar_range_label1, #radar_ar_range_label2 {
-	        color: $white;
+	        color: black;
 	        text-align: left;
 	    }
 	}

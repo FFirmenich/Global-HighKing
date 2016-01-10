@@ -8,8 +8,22 @@
 /* HEADER */
 /* colors */
 /* define important color variables */
+<<<<<<< HEAD
 .icon_difficulty {
   width: 30px; }
+=======
+/* INFO - WINDOW*/
+.info_window {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .info_window > span#title {
+    font-weight: bold; }
+  .info_window > div {
+    display: flex; }
+>>>>>>> KaFu
 
 /* CHECKBOX */
 input[type="checkbox"] {
@@ -289,7 +303,76 @@ html > body > header > #navmenu {
   background-color: #333;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
+#highscoresection > #tabs {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 25px; }
+  @media screen and (min-width: 760px) {
+    #highscoresection > #tabs {
+      display: none; } }
+  #highscoresection > #tabs > .switch_tab {
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    background-color: #ffffff;
+    width: calc(100% - 1px);
+    border-right: 1px solid #ffffff;
+    text-align: center;
+    color: black;
+    cursor: pointer; }
+  #highscoresection > #tabs > .selected {
+    background: black !important;
+    color: #ffffff; }
+
 /* PAGES */
+/* PAGE ROUTE - AR */
+#routearsection {
+  background: url("../image/image.svg") no-repeat;
+  height: calc(100vh - 50px);
+  width: 100%; }
+  #routearsection > #arroute_range {
+    position: absolute;
+    top: auto;
+    bottom: 40px;
+    left: 10%;
+    width: 80%;
+    z-index: 3; }
+    #routearsection > #arroute_range > #route_range_ar {
+      width: 100%; }
+      #routearsection > #arroute_range > #route_range_ar::-webkit-slider-thumb {
+        background-color: black; }
+    #routearsection > #arroute_range > #route_range_ar_label1, #routearsection > #arroute_range #route_range_ar_label2 {
+      color: #ffffff;
+      text-align: left; }
+
+/* PAGE RADAR - AR*/
+#radarsection_ar {
+  background: url("../image/image.svg") no-repeat;
+  height: calc(100vh - 50px); }
+  #radarsection_ar > .walk_button {
+    position: relative;
+    background-color: black;
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px; }
+  #radarsection_ar > #arradar_range {
+    position: absolute;
+    top: auto;
+    bottom: 40px;
+    left: 10%;
+    width: 80%;
+    z-index: 3; }
+    #radarsection_ar > #arradar_range > #radar_ar_range {
+      width: 100%; }
+      #radarsection_ar > #arradar_range > #radar_ar_range::-webkit-slider-thumb {
+        background-color: black; }
+    #radarsection_ar > #arradar_range > #radar_ar_range_label1, #radarsection_ar > #arradar_range #radar_ar_range_label2 {
+      color: black;
+      text-align: left; }
+
 #detailsection {
   width: 100%;
   position: relative; }
@@ -447,9 +530,10 @@ html > body > header > #navmenu {
     position: absolute;
     top: 0;
     width: 100%; }
-    @media screen and (min-width: 650px) {
+    @media screen and (min-width: 760px) {
       #highscoresection > #world, #highscoresection #facebook {
-        width: 40%; } }
+        width: 40%;
+        top: -50px; } }
     #highscoresection > #world > .headline, #highscoresection #facebook > .headline {
       height: 25px;
       margin: 20px 0 20px 0;
@@ -495,45 +579,20 @@ html > body > header > #navmenu {
           text-decoration: none;
           color: #000; }
   #highscoresection > #world {
-    left: 0; }
-    @media screen and (min-width: 650px) {
+    left: 0;
+    margin-top: 50px; }
+    @media screen and (min-width: 760px) {
       #highscoresection > #world {
         display: block !important;
         left: 8%; } }
   #highscoresection > #facebook {
-    display: none; }
-    @media screen and (min-width: 650px) {
+    display: none;
+    margin-top: 50px; }
+    @media screen and (min-width: 760px) {
       #highscoresection > #facebook {
         display: block !important;
         left: auto;
         right: 8%; } }
-  #highscoresection > a > #world_button {
-    position: fixed;
-    left: 10px;
-    bottom: 90px; }
-    @media screen and (min-width: 650px) {
-      #highscoresection > a > #world_button {
-        top: 50px;
-        bottom: auto;
-        left: 0;
-        background-color: transparent;
-        box-shadow: none;
-        color: rgba(0, 0, 0, 0.7);
-        cursor: default; } }
-  #highscoresection > a > #facebook_button {
-    position: fixed;
-    left: 10px;
-    bottom: 10px; }
-    @media screen and (min-width: 650px) {
-      #highscoresection > a > #facebook_button {
-        top: 50px;
-        bottom: auto;
-        left: auto;
-        right: 0;
-        background-color: transparent;
-        box-shadow: none;
-        color: rgba(0, 0, 0, 0.7);
-        cursor: default; } }
 
 #loginsection {
   position: relative;

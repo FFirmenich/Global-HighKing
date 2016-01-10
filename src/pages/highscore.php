@@ -1,4 +1,13 @@
 <section id="highscoresection">
+    <div id="tabs">
+        <div onclick="showWorld();" id="world_button" class="switch_tab selected">
+            <i class="icon ion-earth"></i>
+        </div>
+        <div onclick="showFacebook();" id="facebook_button" class="switch_tab">
+            <i class="icon ion-social-facebook"></i>
+        </div>
+    </div>
+
     <div id="world">
         <div class="headline">Top 20 - Global</div>
         <?php
@@ -59,6 +68,4 @@
         $row->show();
         ?>
     </div>
-    <a onclick="showWorld();"><div id="world_button" class="round_button"><i class="icon ion-earth"></i></div></a>
-    <a onclick="showFacebook();"><div id="facebook_button" class="round_button inactive"><i class="icon ion-social-facebook"></i></div></a>
 </section>
