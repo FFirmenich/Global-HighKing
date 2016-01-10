@@ -12,8 +12,9 @@ class SearchResult {
     private $level = '2';
     private $time = '2h 10m';
     
-    public function __construct($name) {
+    public function __construct($name, $num) {
         $this->name = $name;
+        $this->num = $num;
         $this->length = $this->randomLength();
         $this->height = $this->randomHeight();
         $this->level = $this->randomLevel();
@@ -22,27 +23,32 @@ class SearchResult {
     
     public function show() {
         echo '<div class="searchresult">';
-        echo '    <div class="main">';
-        echo '        <div class="name"><a href="index.php?p=detail&s=info">'.$this->name.'</a></div>';
-        echo '        <div class="attributes">';
-        echo '            <div class="length">';
-        echo '                <span class="distance_arrows"><i class="icon ion-arrow-resize"></i></span>';
-        echo '                <span class="text">'.$this->length.'</span>';
-        echo '            </div>';
-        echo '            <div class="height">';
-        echo '                <span><i class="icon ion-arrow-graph-up-right"></i></span>';
-        echo '                <span class="text">'.$this->height.'</span>';
-        echo '            </div>';
-        echo '            <div class="difficulty">';
-        echo '                <span><img src="'.$this->getLevelIcon().'" class="icon_difficulty" /></span>';
-        echo '                <span class="text">'.$this->level.'</span>';
-        echo '            </div>';
-        echo '            <div class="time">';
-        echo '                <span><i class="icon ion-ios-stopwatch-outline"></i></span>';
-        echo '                <span class="text">'.$this->time.'</span>';
+        echo '    <a href="index.php?p=detail&s=info">';
+        echo '        <div class="main">';
+        echo '            <img src="../image/demo/route'.$this->num.'_1.jpg" />';
+        echo '            <div>';
+        echo '                <div class="name">'.$this->name.'</div>';
+        echo '                <div class="attributes">';
+        echo '                    <div class="length">';
+        echo '                        <span class="distance_arrows"><i class="icon ion-arrow-resize"></i></span>';
+        echo '                        <span class="text">'.$this->length.'</span>';
+        echo '                    </div>';
+        echo '                    <div class="height">';
+        echo '                        <span><i class="icon ion-arrow-graph-up-right"></i></span>';
+        echo '                        <span class="text">'.$this->height.'</span>';
+        echo '                    </div>';
+        echo '                    <div class="difficulty">';
+        echo '                        <span><img src="'.$this->getLevelIcon().'" class="icon_difficulty" /></span>';
+        echo '                        <span class="text">'.$this->level.'</span>';
+        echo '                    </div>';
+        echo '                    <div class="time">';
+        echo '                        <span><i class="icon ion-ios-stopwatch-outline"></i></span>';
+        echo '                        <span class="text">'.$this->time.'</span>';
+        echo '                  </div>';
+        echo '                </div>';
         echo '            </div>';
         echo '        </div>';
-        echo '    </div>';
+        echo '    </a>';
         echo '</div>';
     }
     

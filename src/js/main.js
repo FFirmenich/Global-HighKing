@@ -137,13 +137,15 @@ var buttonarea_listener = true;
 var buttonarea_left = 0;
 
 function buttonareaClick(left) {
-    buttonarea_left = left;
-    if(buttonarea_listener == true) {
-        buttonarea_listener = false;
-        if(mouseMoving) {
-            toggleButtons();
+    if(window.innerWidth <= 980) {
+        buttonarea_left = left;
+        if(buttonarea_listener == true) {
+            buttonarea_listener = false;
+            if(mouseMoving) {
+                toggleButtons();
+            }
+            setTimeout(function() {buttonarea_listener = true;}, 1000);
         }
-        setTimeout(function() {buttonarea_listener = true;}, 1000);
     }
 }
 

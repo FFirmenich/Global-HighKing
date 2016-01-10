@@ -78,8 +78,11 @@
     	display: inline-block;
     	text-align: left;
         width: calc(100% - 40px);
-            
+        max-width: 700px;
+        @include elevation(1);
+        
         @media screen and (min-width: $br-max-smartphone) {
+        /*
             -webkit-column-count: 2;
             -moz-column-count: 2;
             column-count: 2;
@@ -87,10 +90,12 @@
             -webkit-column-gap: 20px;
             -moz-column-gap: 20px;
             column-gap: 20px;
+            */
         }
             
         @media screen and (min-width: $br-max-tablet) {
-            padding: 100px;
+        /*
+            padding: 20px 100px 20px 100px;
             width: calc(100% - 200px);
 
             -webkit-column-count: 3;
@@ -100,6 +105,7 @@
             -webkit-column-gap: 20px;
             -moz-column-gap: 20px;
             column-gap: 20px;
+            */
         }
 
     }

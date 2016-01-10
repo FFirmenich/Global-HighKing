@@ -1,9 +1,18 @@
-/* PAGE ROUTE - STANDARD */
-#routesection > #route {
-    width: 100%;
-}
-#routesection > a > #ar {
-    position: fixed;
-    left: 10px;
-    bottom: 10px;
+@charset "utf-8";
+
+#routesection {
+	height: calc(100vh - 50px);
+	width: 100%;
+	background-image: url('../image/demo/karte_navigation.jpg');
+	background-position: 45% 30%;
+	background-size: cover;
+
+	> #route {
+	    width: 100%;
+	}
+	> a > #ar {
+	    position: fixed;
+	    left: 10px;
+	    bottom: 10px;
+	}
 }
