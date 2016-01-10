@@ -8,10 +8,9 @@
 /* HEADER */
 /* colors */
 /* define important color variables */
-<<<<<<< HEAD
 .icon_difficulty {
   width: 30px; }
-=======
+
 /* INFO - WINDOW*/
 .info_window {
   display: none;
@@ -23,7 +22,6 @@
     font-weight: bold; }
   .info_window > div {
     display: flex; }
->>>>>>> KaFu
 
 /* CHECKBOX */
 input[type="checkbox"] {
@@ -357,7 +355,8 @@ html > body > header > #navmenu {
     height: 35px;
     border-radius: 50%;
     text-align: center;
-    line-height: 35px; }
+    line-height: 35px;
+    cursor: pointer; }
   #radarsection_ar > #arradar_range {
     position: absolute;
     top: auto;
