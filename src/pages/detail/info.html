@@ -3,33 +3,97 @@
         <div class="hikeimage"><div class="img"></div></div>
     </div>
     <div class="content">
-        <p class="b_roboto">Start der Tour:</p>
-        <p>Kilpisjärvi (Lappland)</p>
+        <div class="text">
+            <p class="b_roboto">Start der Tour:</p>
+            <p>Kilpisjärvi (Lappland)</p>
 
-        <p class="b_roboto">Ziel der Tour:</p>
-        <p>Haltitunturi (Lappland)</p>
-        
-        <p class="b_roboto">Tour­Route:</p>
-        <p>
-            Im weiten Nordwesten Finnlands startet unsere Tour im verschlafenen Örtchen Kilpisjärvi (823m).        
-            Von da aus geht es Richtung Nordosten in die Wildniss von Käsivarsi (1000m hoch, 2206 km² groß).
-            Dieses Naturreservat ist das populärste Reservat in Finnland und beinhaltet unzählige kleine Seen und Gewässer.
-            Unsere Strecke führt 2 Kilometer lang durch die einzigartige Tundra Lapplands in Richtung des Fußes des Haltitunturi.
-            Der Anstieg ist generell eher für Erfahrene Wanderer geeignet, da es teilweise auf unbefestigten und rauen Wege
-            steil bergauf geht. Die Route schlängelt sich gegen den Uhrzeigersinn um den Berg herum und endet nach gut anderthalb
-            Stunden und 5 Kilometern am Gipfelkreuz des Haltitunturi. Doch die Anstrengungen sind definitiv lohnenswert:
-            Der Haltitunturi ist mit 1328 Metern der Höchste Berg Finnlands und durch seine schöne Lage kann man von seinem Gipfel
-            aus über die Provinz Troms (554m) und den Barentssee blicken. Auch in die Landschaft des Skandinavischen Nachbarn
-            Norwegen lässt sich ohne Probleme blicken. Der Abstieg erfolgt über die gleiche Aufstiegsroute, doch anstatt am Fuße des
-            Berges in den Südwesten zu wandern, gehen sie auf einem der schönsten Wanderwege Finnlands weitere 3 Kilometer in
-            Richtung der Stadt Rovaniemi (634m). Dort angekommen ist ihrer Tagestour beendet und sie können in einem der vielen
-            finnischen Gasthäuser den Tag ausklingen lassen.
-        </p>
-        
-        <p class="b_roboto">Anfahrt:</p>
-        <p>Von Tromsø aus per Bus nach Kilpisjärvi.</p>
-        
-        <p class="b_roboto">Ausrüstung:</p>
-        <p>Angemessene und warme Bekleidung, Bergschuhe, Verpflegung, Wanderkarte, Notfall-Equipment, Mobil­Telefon</p>
+            <p class="b_roboto">Ziel der Tour:</p>
+            <p>Haltitunturi (Lappland)</p>
+            
+            <p class="b_roboto">Tour-Route:</p>
+            <p>
+                Im weiten Nordwesten Finnlands startet unsere Tour im verschlafenen Örtchen Kilpisjärvi (823m).        
+                Von da aus geht es Richtung Nordosten in die Wildniss von Käsivarsi (1000m hoch, 2206 km² groß).
+                Dieses Naturreservat ist das populärste Reservat in Finnland und beinhaltet unzählige kleine Seen und Gewässer.
+                Unsere Strecke führt 2 Kilometer lang durch die einzigartige Tundra Lapplands in Richtung des Fußes des Haltitunturi.
+                Der Anstieg ist generell eher für Erfahrene Wanderer geeignet, da es teilweise auf unbefestigten und rauen Wege
+                steil bergauf geht. Die Route schlängelt sich gegen den Uhrzeigersinn um den Berg herum und endet nach gut anderthalb
+                Stunden und 5 Kilometern am Gipfelkreuz des Haltitunturi. Doch die Anstrengungen sind definitiv lohnenswert:
+                Der Haltitunturi ist mit 1328 Metern der Höchste Berg Finnlands und durch seine schöne Lage kann man von seinem Gipfel
+                aus über die Provinz Troms (554m) und den Barentssee blicken. Auch in die Landschaft des Skandinavischen Nachbarn
+                Norwegen lässt sich ohne Probleme blicken. Der Abstieg erfolgt über die gleiche Aufstiegsroute, doch anstatt am Fuße des
+                Berges in den Südwesten zu wandern, gehen sie auf einem der schönsten Wanderwege Finnlands weitere 3 Kilometer in
+                Richtung der Stadt Rovaniemi (634m). Dort angekommen ist ihrer Tagestour beendet und sie können in einem der vielen
+                finnischen Gasthäuser den Tag ausklingen lassen.
+            </p>
+            
+            <p class="b_roboto">Anfahrt:</p>
+            <p>Von Tromsø aus per Bus nach Kilpisjärvi.</p>
+            
+            <p class="b_roboto">Ausrüstung:</p>
+            <p>Angemessene und warme Bekleidung, Bergschuhe, Verpflegung, Wanderkarte, Notfall-Equipment, Mobil-Telefon</p>
+        </div>
+        <div class="desktop">
+            <div class="image" onclick="openImage(this)"></div>
+            <div class="map" onclick="openImage(this)"></div>
+            <div class="height" onclick="openImage(this)"></div>
+        </div>
+        <script type="text/javascript">
+            function openImage(image) {
+                var cls = image.className;
+                /* Overlay Part */
+                var div = document.createElement("div");
+                div.id = "overlay";
+                div.style.position = "absolute";
+                div.style.width = "100%";
+                div.style.height = "100%";
+                div.style.background = "rgba(0,0,0,0.5)";
+                div.style.zIndex = "100";
+                div.style.cursor = "pointer";
+
+                div.addEventListener('click',function(){closeImage();},true)
+
+                document.body.appendChild(div);
+
+                /* Image Part */
+                var url = "";
+                switch(cls) {
+                    case 'image':
+                        url = '../image/demo/route2_1.jpg';
+                        break;
+                    case 'map':
+                        url = '../image/demo/karte_navigation.jpg';
+                        break;
+                    case 'height':
+                        url = '../image/demo/hoehenprofil.png';
+                        break;
+                    default:
+                        return;
+                }
+                var img = document.createElement("img");
+                img.src = url;
+                img.id = "overlay-img";
+                img.style.position = "absolute";
+                img.style.margin = "auto";
+                img.style.top = "0";
+                img.style.right = "0";
+                img.style.bottom = "0";
+                img.style.left = "0";
+                img.style.width = "50%";
+                img.style.height = "auto";
+                img.style.maxWidth = "90%";
+                img.style.maxHeight = "90%";
+                img.style.zIndex = "101";
+
+                document.body.appendChild(img);
+
+            }
+            function closeImage() {
+                var element = document.getElementById("overlay");
+                element.parentNode.removeChild(element);
+                var img = document.getElementById("overlay-img");
+                img.parentNode.removeChild(img);
+            }
+        </script>
     </div>
 </div>

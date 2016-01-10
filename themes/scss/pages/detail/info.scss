@@ -2,6 +2,16 @@
 
 #detailsection > #detailbody > #detailbodyinfo {
 	text-align: center;
+    background-color: rgba(0,0,0,0.1);
+    min-height: calc(100vh - 100px);
+    width: 100%;
+    position: relative;
+
+    @media screen and (min-width: $br-max-tablet) {
+        text-align: left;
+        min-height: calc(100vh - 50px);
+    }
+
     
     > p {
         margin-top: 0;
@@ -11,6 +21,10 @@
         width: 100%;
         position: relative;
         height: 200px;
+
+        @media screen and (min-width: $br-max-tablet) {
+            display: none;
+        }
         
         &:before, &:after {
             font-family: Ionicons;
@@ -74,38 +88,52 @@
     }
 
     > .content {
-        padding: 20px;
-    	display: inline-block;
-    	text-align: left;
-        width: calc(100% - 40px);
-        max-width: 700px;
+        width: 100%;
         @include elevation(1);
+        background-color: $white;
+        min-height: calc(100vh - 300px);
+        display: inline-block;
         
         @media screen and (min-width: $br-max-smartphone) {
-        /*
-            -webkit-column-count: 2;
-            -moz-column-count: 2;
-            column-count: 2;
-
-            -webkit-column-gap: 20px;
-            -moz-column-gap: 20px;
-            column-gap: 20px;
-            */
+            max-width: 86%;
         }
             
         @media screen and (min-width: $br-max-tablet) {
-        /*
-            padding: 20px 100px 20px 100px;
-            width: calc(100% - 200px);
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            width: calc(100% - 180px);
+            margin-left: 90px;
+            min-height: calc(100vh - 50px);
+        }
 
-            -webkit-column-count: 3;
-            -moz-column-count: 3;
-            column-count: 3;
+        > .text {
+            padding: 0 20px 0 20px;
+            text-align: left;
 
-            -webkit-column-gap: 20px;
-            -moz-column-gap: 20px;
-            column-gap: 20px;
-            */
+            @media screen and (min-width: $br-max-tablet) {
+                padding: 0 60px 0 60px;
+                width: calc(50% - 120px);
+            }
+        }
+
+        > .desktop {
+            display: none;
+            width: 50%;
+            background-color: $white;
+
+            @media screen and (min-width: $br-max-tablet) {
+                display: block;
+            }
+            > .image, .map, .height {
+                width: 100%;
+                height: calc((100vh - 50px) / 3);
+                background-image: url('../image/image.svg');
+                background-position: 50% 50%;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
         }
 
     }

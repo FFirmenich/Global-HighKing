@@ -1,6 +1,9 @@
 @charset "utf-8";
 
-#detailsection > #detailbody > #detailbodyheight > #height {
+#detailsection > #detailbody > #detailbodyheight {
+    background-image: url('../image/image.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 100%;
-    height: calc(100vh - 305px);
+    height: calc(100vh - 100px);
 }
