@@ -1149,8 +1149,12 @@ header {
   height: calc(100vh - 50px);
   width: 100%; }
   #routearsection > #arroute_range {
-    text-align: center;
-    width: 60%; }
+    position: absolute;
+    top: auto;
+    bottom: 40px;
+    left: 10%;
+    width: 80%;
+    z-index: 3; }
     #routearsection > #arroute_range > #route_range_ar {
       width: 100%; }
       #routearsection > #arroute_range > #route_range_ar::-webkit-slider-thumb {
@@ -1200,6 +1204,15 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%; }
+
+#detailsection > #detailbody > #detailbodymap {
+  background-image: url("../image/demo/karte_navigation.jpg");
+  width: 100%;
+  height: calc(100vh - 100px); }
+
+#detailsection > #detailbody > #detailbodyheight {
+  background-image: url("../image/demo/hoehenprofil.png");
+  height: calc(100vh - 100px); }
 
 #highscoresection {
   background: url("../image/demo/background.jpg");

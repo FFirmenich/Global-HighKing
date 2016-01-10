@@ -7,8 +7,12 @@
     width: 100%;
 	
 	> #arroute_range{	
-		text-align: center;
-		width: 60%;
+		position: absolute;
+	    top: auto;
+	    bottom: 40px;
+	    left: 10%;
+	    width: 80%;
+	    z-index: 3;
 
 		> #route_range_ar {
 	        &::-webkit-slider-thumb {
