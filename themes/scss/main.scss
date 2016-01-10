@@ -8,6 +8,8 @@
 
 @import 'mixins';
 
+@import 'info_window';
+
 @import 'inputs';
 @import 'buttons';
 
@@ -16,6 +18,7 @@
 @import 'tabs';
 
 /* PAGES */
+@import 'pages/ar';
 @import 'pages/detail';
 @import 'pages/highscore';
 @import 'pages/login';

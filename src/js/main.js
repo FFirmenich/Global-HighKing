@@ -233,3 +233,34 @@ function closeAchievement() {
     }
     is_achievement_open = false;
 }
+
+/* INFO-WINDOW */
+var x = 0;
+var y = 0;
+var is_open = false;
+var infowindowlistener = function(event) {
+    closeInfoWindow();
+}
+function showInfoWindow(event){
+    is_open = true;
+    document.getElementById('radarsection_ar').addEventListener('click', infowindowlistener, true);
+    x = event.clientX - 100;
+    y = event.clientY - 150;
+
+    document.getElementById('info_box').style.left = x + 'px';
+    document.getElementById('info_box').style.top = y + 'px';
+    document.getElementById('info_box').style.display = 'block';
+}
+function closeInfoWindow(){
+    document.getElementById('info_box').style.display = 'none';
+    is_open = false;
+    document.getElementById('radarsection_ar').removeEventListener('click', infowindowlistener, true);
+}
+
+function toggleInfoWindow(event){
+    if(is_open){
+        closeInfoWindow();
+    } else{
+        showInfoWindow(event);
+    }
+}

@@ -1,16 +1,19 @@
+@charset "utf-8";
+
 /* INFO - WINDOW*/
 
 .info_window {
+	display: none;
 	position: absolute;
 	padding: 10px;
 	background-color: $white;
 	@include elevation(1);
 
-	> p > span#title {
+	> span#title {
 		font-weight: bold;
 	}
 
 	> div {
-		display: flex-block;
+		display: flex;
 	}
 }

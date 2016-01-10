@@ -8,6 +8,18 @@
 /* HEADER */
 /* colors */
 /* define important color variables */
+/* INFO - WINDOW*/
+.info_window {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .info_window > span#title {
+    font-weight: bold; }
+  .info_window > div {
+    display: flex; }
+
 /* CHECKBOX */
 input[type="checkbox"] {
   display: none; }
@@ -295,6 +307,54 @@ html > body > header > #navmenu {
     color: #ffffff; }
 
 /* PAGES */
+/* PAGE ROUTE - AR */
+#routearsection {
+  background: url("../image/image.svg") no-repeat;
+  height: calc(100vh - 50px);
+  width: 100%; }
+  #routearsection > #arroute_range {
+    position: absolute;
+    top: auto;
+    bottom: 40px;
+    left: 10%;
+    width: 80%;
+    z-index: 3; }
+    #routearsection > #arroute_range > #route_range_ar {
+      width: 100%; }
+      #routearsection > #arroute_range > #route_range_ar::-webkit-slider-thumb {
+        background-color: black; }
+    #routearsection > #arroute_range > #route_range_ar_label1, #routearsection > #arroute_range #route_range_ar_label2 {
+      color: #ffffff;
+      text-align: left; }
+
+/* PAGE RADAR - AR*/
+#radarsection_ar {
+  background: url("../image/image.svg") no-repeat;
+  height: calc(100vh - 50px); }
+  #radarsection_ar > .walk_button {
+    position: relative;
+    background-color: black;
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px; }
+  #radarsection_ar > #arradar_range {
+    position: absolute;
+    top: auto;
+    bottom: 40px;
+    left: 10%;
+    width: 80%;
+    z-index: 3; }
+    #radarsection_ar > #arradar_range > #radar_ar_range {
+      width: 100%; }
+      #radarsection_ar > #arradar_range > #radar_ar_range::-webkit-slider-thumb {
+        background-color: black; }
+    #radarsection_ar > #arradar_range > #radar_ar_range_label1, #radarsection_ar > #arradar_range #radar_ar_range_label2 {
+      color: black;
+      text-align: left; }
+
 #detailsection {
   width: 100%;
   position: relative; }
