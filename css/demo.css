@@ -1161,10 +1161,12 @@ header {
 
 #detailsection > #detailbody > #detailbodymap {
   background-image: url("../image/demo/karte_navigation.jpg");
-  width: 100%; }
+  width: 100%;
+  height: calc(100vh - 100px); }
 
-#detailsection > #detailbody > #detailbodyheight > #height {
-  width: 100%; }
+#detailsection > #detailbody > #detailbodyheight {
+  background-image: url("../image/demo/hoehenprofil.png");
+  height: calc(100vh - 100px); }
 
 #highscoresection {
   background: url("../image/demo/background.jpg");

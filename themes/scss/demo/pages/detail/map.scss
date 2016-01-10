@@ -3,4 +3,5 @@
 #detailsection > #detailbody > #detailbodymap {
     background-image: url('../image/demo/karte_navigation.jpg');
     width: 100%;
+    height: calc(100vh - 100px);
 }
