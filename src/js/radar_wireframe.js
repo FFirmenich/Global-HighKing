@@ -56,9 +56,9 @@ function addHikeCircles(count) {
     for(var i = 0; i < count; i++) {
         var hike_circle = document.createElement('div');
         hike_circle.className = 'hike_circle';
-        hike_circle.innerHTML = '<i class="icon ion-android-walk">';
         hike_circle.style.left = Math.floor((Math.random() * 95) + 1) + '%';
         hike_circle.style.top = Math.floor((Math.random() * 95) + 1) + '%';
+        hike_circle.addEventListener('click',function() {toggleInfoWindow(event);}, true);
         document.getElementById('radarsection').appendChild(hike_circle);
     }
 }

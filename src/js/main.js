@@ -239,13 +239,13 @@ function closeAchievement() {
 /* INFO-WINDOW */
 var x = 0;
 var y = 0;
-var is_open = false;
+var info_window_open = false;
 var infowindowlistener = function(event) {
     closeInfoWindow();
 }
 function showInfoWindow(event){
-    is_open = true;
-    document.getElementById('radarsection_ar').addEventListener('click', infowindowlistener, true);
+    info_window_open = true;
+    document.getElementsByTagName('body')[0].addEventListener('click', infowindowlistener, true);
     x = event.clientX - 100;
     y = event.clientY - 150;
 
@@ -255,12 +255,13 @@ function showInfoWindow(event){
 }
 function closeInfoWindow(){
     document.getElementById('info_box').style.display = 'none';
-    is_open = false;
-    document.getElementById('radarsection_ar').removeEventListener('click', infowindowlistener, true);
+    info_window_open = false;
+    document.getElementsByTagName('body')[0].removeEventListener('click', infowindowlistener, true);
 }
 
 function toggleInfoWindow(event){
-    if(is_open){
+    console.log(info_window_open);
+    if(info_window_open){
         closeInfoWindow();
     } else{
         showInfoWindow(event);

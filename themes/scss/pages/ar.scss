@@ -33,16 +33,19 @@
 	background: url("../image/image.svg") no-repeat;
 	height: calc(100vh - 50px);
 
-	> .walk_button {
-		position: relative;
-		background-color: black;
-		color: $white;
-		width: 35px;
-		height: 35px;
-		border-radius: 50%;
-		text-align: center;
-		line-height: 35px;
-		cursor: pointer;
+	> #walk1 {
+		top: 80%;
+    	left: 20%;
+	}
+
+	> #walk2 {
+	    top: 70%;
+    	left: 85%;
+	}
+
+	> #walk3 {    
+	    top: 85%;
+    	left: 60%;
 	}
 
 	> #arradar_range{	

@@ -33,18 +33,6 @@
         z-index: 5;
     }
     
-    > .hike_circle {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #ddd;
-        vertical-align: middle;
-        line-height: 30px;
-        text-align: center;
-        cursor: pointer;
-    }
-    
     > #radar_range {
         position: absolute;
         top: auto;
@@ -74,6 +62,10 @@
         position: fixed;
         left: 10px;
         bottom: 10px;
+    
+        @media screen and (min-width: $br-max-tablet) {
+            display: none;
+        }
     }
 }
 
