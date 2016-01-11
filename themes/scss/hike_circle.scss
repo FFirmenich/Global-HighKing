@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.hike_circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    vertical-align: middle;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+
+    &:after {
+    	font-family: "Ionicons";
+    	content: "\f3bb";
+    }
+}

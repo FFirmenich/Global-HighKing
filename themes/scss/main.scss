@@ -13,11 +13,13 @@
 @import 'info_window';
 
 @import 'inputs';
+
 @import 'buttons';
 
 @import 'header';
 
 @import 'tabs';
+@import 'hike_circle';
 
 /* PAGES */
 @import 'pages/ar';
@@ -26,6 +28,7 @@
 @import 'pages/login';
 @import 'pages/profile';
 @import 'pages/radar';
+@import 'pages/route';
 @import 'pages/search';
 @import 'pages/start';
 

@@ -5,19 +5,8 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     
-    > #radar {
-    }
-    
-    > #radar_circle {
-    }
-    
     > #radar_position {
         background-color: $green;
-    }
-    
-    > .hike_circle {
-        background-color: $blue;
-        color: $white;
     }
     
     > #radar_range {
@@ -28,8 +17,5 @@
     
     > #radar_range_label1, #radar_range_label2 {
         color: $white;
-    }
-    
-    > a > #ar {
     }
 }

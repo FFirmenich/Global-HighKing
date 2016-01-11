@@ -8,6 +8,7 @@
 	padding: 10px;
 	background-color: $white;
 	@include elevation(1);
+	z-index: 101;
 
 	> span#title {
 		font-weight: bold;
@@ -15,5 +16,13 @@
 
 	> div {
 		display: flex;
+	}
+
+	> div {
+		> #length, > #height, > #difficulty, > #time {
+			display: block;
+			width: 150px;
+			padding: 5px 10px 5px 10px;
+		}
 	}
 }

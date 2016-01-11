@@ -56,35 +56,9 @@ function addHikeCircles(count) {
     for(var i = 0; i < count; i++) {
         var hike_circle = document.createElement('div');
         hike_circle.className = 'hike_circle';
-        hike_circle.innerHTML = '<i class="icon ion-android-walk">';
         hike_circle.style.left = Math.floor((Math.random() * 95) + 1) + '%';
         hike_circle.style.top = Math.floor((Math.random() * 95) + 1) + '%';
-        hike_circle.addEventListener('click',function() {showInfo(this);});
+        hike_circle.addEventListener('click',function() {toggleInfoWindow(event);}, true);
         document.getElementById('radarsection').appendChild(hike_circle);
-    }
-}
-
-var info_visible = false;
-
-function showInfo(element) {
-    if(info_visible) {
-        hideInfo();
-    }
-    var info = document.createElement('div');
-    info.className = 'hike_info';
-    info.innerHTML = 'Hier kommt die Info hin';
-    info.style.left = element.left;
-    info.style.top = element.top;
-    element.appendChild(info);
-    info_visible = true;
-}
-
-document.addEventListener('click',hideInfo);
-
-function hideInfo() {
-    if(info_visible) {
-        elements = document.querySelector(".hike_info");
-        console.log(elements);
-        elements.parentNode.removeChild(elements)
     }
 }
